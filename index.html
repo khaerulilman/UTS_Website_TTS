@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Kotak</title>
+    <style>
+        * {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-color: darkgoldenrod;
+        }
+
+        .baris {
+            display: flex;
+        }
+
+        .baris .kotak {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        .kotak-kosong {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: gray;
+            pointer-events: none;
+            user-select: none;
+            outline: none;
+        }
+
+        .data-diri li {
+            list-style: none;
+            font-size: 20px;
+        }
+
+        .input-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .label {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: space-between; padding: 20px; height:70px; background-color: grey;">
+        <div style="display: flex; ">
+            <div style="margin-right: 120px;">
+                <button id="result">Cek Jawaban</button>
+                <button id="reset" style="margin-top: 10px;">Reset</button>
+                <div style="display: flex;">
+                    <div id="poin" style="margin-right: 10px;">Score: 0</div>
+                    <div>Total Score: 60</div>
+                </div>
+            </div>
+            <div style="font-size: 50px;">TTS Random</div>
+        </div>
+
+        <ul class="data-diri">
+            <li>Mochammad khaerul ilman</li>
+            <li>1227050073</li>
+        </ul>
+
+    </div>
+
+    <div style="display:flex; margin: 20px;">
+        <div style="margin-right: 40px;">
+            <h1>Mendatar</h1>
+            <ol>
+                <li>Bahasa pemrograman yang sering digunakan pada web</li>
+                <li>Bahasa inggris Elang</li>
+                <li>dewi kebijaksanaan</li>
+                <li>Lawan kata kemarau</li>
+                <li>Biggest Cryptocurrency</li>
+            </ol>
+            <h1>Menurun</h1>
+            <ol>
+                <li>Merk HP</li>
+                <li>Cerita Dongeng Eropa terkenal</li>
+                <li>Pembangkit listrik tenaga air</li>
+                <li>konteks desain dan tipografi di Indonesia dapat diartikan sebagai "jenis huruf"</li>
+                <li>Cairan Asam yang aman</li>
+            </ol>
+        </div>
+        <div class="container">
+            <div class="baris">
+                <div class="input-container">
+                    <span class="label">5</span>
+                    <input type="text" id="1_1" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="1_2" class="kotak" maxlength="1">
+                <input type="text" id="1_3" class="kotak" maxlength="1">
+                <div class="input-container">
+                    <span class="label">5</span>
+                    <input type="text" id="1_4" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="1_5" class="kotak" maxlength="1">
+                <input type="text" id="1_6" class="kotak" maxlength="1">
+                <input type="text" id="1_7" class="kotak" maxlength="1">
+                <input type="text" id="1_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="1_9" class="kotak-kosong" maxlength="1">
+                <div class="input-container">
+                    <span class="label">4</span>
+                    <input type="text" id="1_10" class="kotak" maxlength="1">
+                </div>
+            </div>
+            <div class="baris">
+                <input type="text" id="2_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_2" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_4" class="kotak" maxlength="1">
+                <input type="text" id="2_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_6" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="2_10" class="kotak" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="3_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_2" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_4" class="kotak" maxlength="1">
+                <input type="text" id="3_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_6" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="3_10" class="kotak" maxlength="1">
+            </div>
+            <div class="baris">
+                <div class="input-container">
+                    <span class="label">1</span>
+                    <input type="text" id="4_1" class="kotak" maxlength="1">
+                </div>
+                <div class="input-container">
+                    <span class="label">1</span>
+                    <input type="text" id="4_2" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="4_3" class="kotak" maxlength="1">
+                <input type="text" id="4_4" class="kotak" maxlength="1">
+                <input type="text" id="4_5" class="kotak" maxlength="1">
+                <div class="input-container">
+                    <span class="label">2</span>
+                    <input type="text" id="4_6" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="4_7" class="kotak" maxlength="1">
+                <input type="text" id="4_8" class="kotak" maxlength="1">
+                <div class="input-container">
+                    <span class="label">3</span>
+                    <input type="text" id="4_9" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="4_10" class="kotak" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="5_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="5_2" class="kotak" maxlength="1">
+                <input type="text" id="5_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="5_4" class="kotak-kosong" maxlength="1">
+                <input type="text" id="5_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="5_6" class="kotak" maxlength="1">
+                <input type="text" id="5_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="5_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="5_9" class="kotak" maxlength="1">
+                <input type="text" id="5_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="6_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="6_2" class="kotak" maxlength="1">
+                <input type="text" id="6_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="6_4" class="kotak-kosong" maxlength="1">
+                <input type="text" id="6_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="6_6" class="kotak" maxlength="1">
+                <input type="text" id="6_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="6_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="6_9" class="kotak" maxlength="1">
+                <input type="text" id="6_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="7_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="7_2" class="kotak" maxlength="1">
+                <input type="text" id="7_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="7_4" class="kotak-kosong" maxlength="1">
+                <input type="text" id="7_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="7_6" class="kotak" maxlength="1">
+                <input type="text" id="7_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="7_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="7_9" class="kotak" maxlength="1">
+                <input type="text" id="7_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="8_1" class="kotak-kosong" maxlength="1">
+                <div class="input-container">
+                    <span class="label">2</span>
+                    <input type="text" id="8_2" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="8_3" class="kotak" maxlength="1">
+                <input type="text" id="8_4" class="kotak" maxlength="1">
+                <input type="text" id="8_5" class="kotak" maxlength="1">
+                <input type="text" id="8_6" class="kotak" maxlength="1">
+                <input type="text" id="8_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="8_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="8_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="8_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="9_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_2" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_4" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_6" class="kotak" maxlength="1">
+                <input type="text" id="9_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="9_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="10_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="10_2" class="kotak-kosong" maxlength="1">
+                <div class="input-container">
+                    <span class="label">3</span>
+                    <input type="text" id="10_3" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="10_4" class="kotak" maxlength="1">
+                <input type="text" id="10_5" class="kotak" maxlength="1">
+                <input type="text" id="10_6" class="kotak" maxlength="1">
+                <input type="text" id="10_7" class="kotak" maxlength="1">
+                <input type="text" id="10_8" class="kotak" maxlength="1">
+                <input type="text" id="10_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="10_10" class="kotak-kosong" maxlength="1">
+            </div>
+
+            <div class="baris">
+                <input type="text" id="11_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_2" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_4" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_6" class="kotak" maxlength="1">
+                <input type="text" id="11_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="11_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="12_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_2" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_3" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_4" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_5" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_6" class="kotak" maxlength="1">
+                <input type="text" id="12_7" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="12_10" class="kotak-kosong" maxlength="1">
+            </div>
+            <div class="baris">
+                <input type="text" id="13_1" class="kotak-kosong" maxlength="1">
+                <input type="text" id="13_2" class="kotak-kosong" maxlength="1">
+                <div class="input-container">
+                    <span class="label">4</span>
+                    <input type="text" id="13_3" class="kotak" maxlength="1">
+                </div>
+                <input type="text" id="13_4" class="kotak" maxlength="1">
+                <input type="text" id="13_5" class="kotak" maxlength="1">
+                <input type="text" id="13_6" class="kotak" maxlength="1">
+                <input type="text" id="13_7" class="kotak" maxlength="1">
+                <input type="text" id="13_8" class="kotak-kosong" maxlength="1">
+                <input type="text" id="13_9" class="kotak-kosong" maxlength="1">
+                <input type="text" id="13_10" class="kotak-kosong" maxlength="1">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        const words = {
+            //mendatar
+            "javascript": ["4_1", "4_2", "4_3", "4_4", "4_5", "4_6", "4_7", "4_8", "4_9", "4_10"],
+            "eagle": ["8_2", "8_3", "8_4", "8_5", "8_6"],
+            "athena": ["10_3", "10_4", "10_5", "10_6", "10_7", "10_8"],
+            "hujan": ["13_3", "13_4", "13_5", "13_6", "13_7"],
+            "bitcoin": ["1_1", "1_2", "1_3", "1_4", "1_5", "1_6", "1_7"],
+
+            // Menurun
+            "apple": ["4_2", "5_2", "6_2", "7_2", "8_2"],
+            "cinderella": ["4_6", "5_6", "6_6", "7_6", "8_6", "9_6", "10_6", "11_6", "12_6", "13_6"],
+            "plta": ["4_9", "5_9", "6_9", "7_9"],
+            "font": ["1_10", "2_10", "3_10", "4_10"],
+            "cuka": ["1_4", "2_4", "3_4", "4_4"]
+        };
+
+        function checkAnswer(id, answer) {
+            const box = document.getElementById(id);
+            if (box) {
+                if (box.value.toLowerCase() === answer) {
+                    box.style.backgroundColor = "green";
+                    return true; // Return true for correct answer
+                } else {
+                    box.style.backgroundColor = "red";
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        document.getElementById("result").onclick = function () {
+            score = 0;
+            for (const [word, positions] of Object.entries(words)) {
+                word.split("").forEach((letter, index) => {
+                    if (checkAnswer(positions[index], letter)) {
+                        score++;
+                    }
+                });
+            }
+
+            document.getElementById("poin").textContent = "Poin: " + score;
+        };
+
+        document.getElementById("reset").onclick = function () {
+
+            for (const positions of Object.values(words)) {
+                positions.forEach((id) => {
+                    const box = document.getElementById(id);
+                    if (box) {
+                        box.value = '';
+                        box.style.backgroundColor = "";
+                    }
+                });
+            }
+
+
+            score = 0;
+            document.getElementById("poin").textContent = "Poin: " + score;
+        };
+
+
+
+    </script>
+
+</body>
+
+</html>
